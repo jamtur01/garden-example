@@ -10,7 +10,3 @@ get '/mate' do
   "Mate!"
 end
 
-get '/yo' do
-  redirect "http://yo-service/yo"
-end
-

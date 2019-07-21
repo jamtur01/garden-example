@@ -15,7 +15,3 @@ module:
       ingresses:
         - path: /mate
           port: http
-        - path: /yo
-          port: http
-      dependencies:
-        - yo-service

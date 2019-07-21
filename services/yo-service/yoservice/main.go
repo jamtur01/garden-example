@@ -8,24 +8,21 @@ import (
 )
 
 func yo(w http.ResponseWriter, r *http.Request) {
-        resp, err := http.Get("http://mate-service/mate")
-        if err != nil {
-          log.Println(err)
-        }
-
-        resp.Body.Close()
-
-        body, err := ioutil.ReadAll(resp.Body)
-        if err != bil {
-          log.Println(err)
-        }
-
-	fmt.Fprint(w, "Yo", string(body), "!")
+        res, err := http.Get("http://mate-service/mate")
+	if err != nil {
+		log.Fatal(err)
+	}
+	mate, err := ioutil.ReadAll(res.Body)
+	res.Body.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Fprint(w, "Yo", " ", string(mate))
 }
 
 func main() {
 	http.HandleFunc("/yo", yo)
-	fmt.Println("Server running...")
 
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Server running...")
+        log.Fatal(http.ListenAndServe(":8080", nil))
 }
