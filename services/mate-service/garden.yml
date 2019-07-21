@@ -1,0 +1,21 @@
+module:
+  name: mate-service
+  description: Mate Service - the Ruby edition
+  type: container
+  services:
+    - name: mate-service
+      ports:
+        - name: http
+          containerPort: 8080
+          servicePort: 80
+      healthCheck:
+        httpGet:
+          path: /mate
+          port: http
+      ingresses:
+        - path: /mate
+          port: http
+        - path: /yo
+          port: http
+      dependencies:
+        - yo-service
