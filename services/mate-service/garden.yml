@@ -1,5 +1,5 @@
 module:
-  name: mate
+  name: mate-service
   description: Mate Service - the Ruby edition
   type: container
   services:
@@ -15,3 +15,7 @@ module:
       ingresses:
         - path: /mate
           port: http
+        - path: /yo
+          port: http
+      dependencies:
+        - yo-service

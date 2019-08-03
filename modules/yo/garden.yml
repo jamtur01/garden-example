@@ -1,5 +1,5 @@
 module:
-  name: yo-service
+  name: yo
   description: Yo Service - the Go edition
   type: container
   services:

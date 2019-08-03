@@ -1,17 +1,17 @@
 module:
-  name: mate
-  description: Mate Service - the Ruby edition
+  name: yo-service
+  description: Yo Service - the Go edition
   type: container
   services:
-    - name: mate-service
+    - name: yo-service
       ports:
         - name: http
           containerPort: 8080
           servicePort: 80
       healthCheck:
         httpGet:
-          path: /mate
+          path: /yo
           port: http
       ingresses:
-        - path: /mate
+        - path: /yo
           port: http
