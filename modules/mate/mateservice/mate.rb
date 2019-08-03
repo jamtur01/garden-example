@@ -10,3 +10,6 @@ get '/mate' do
   "Mate!"
 end
 
+get '/folks' do
+  "Folks!"
+end

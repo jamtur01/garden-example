@@ -15,3 +15,5 @@ module:
       ingresses:
         - path: /mate
           port: http
+        - path: /folks
+          port: http
