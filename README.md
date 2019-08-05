@@ -1,6 +1,6 @@
 # Example Garden project
 
-Example project for blog post on Garden.
+Example project for [blog post on Garden](https://www.kartar.net/2019/08/garden/).
 
 ## Copyright 
 
